@@ -8,15 +8,15 @@ pack set-default-builder cloudfoundry/cnb:bionic
 
 echo "Packing the Service"
 cd service
-pack build scg-demo-service --env "BP_JAVA_VERSION=8.*"
+mvn compile com.google.cloud.tools:jib-maven-plugin:1.3.0:dockerBuild -Dimage=scg-demo-service:latest
 cd ..
 
 echo "Packing the Eureka Discovery Server"
 cd registry
-pack build scg-demo-registry --env "BP_JAVA_VERSION=8.*"
+mvn compile com.google.cloud.tools:jib-maven-plugin:1.3.0:dockerBuild -Dimage=scg-demo-registry:latest
 cd ..
 
 echo "Packing the Spring Cloud Gateway"
 cd gateway
-pack build scg-demo-gateway --env "BP_JAVA_VERSION=8.*"
+mvn compile com.google.cloud.tools:jib-maven-plugin:1.3.0:dockerBuild -Dimage=scg-demo-gateway:latest
 cd ..

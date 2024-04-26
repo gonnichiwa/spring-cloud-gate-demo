@@ -13,8 +13,7 @@ services:
     depends_on: 
       - "registry"
     environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://registry:8761/eureka
+      - EUREKA_SERVER=http://registry:8761/eureka
   gateway:
     image: scg-demo-gateway:latest
     container_name: gateway
@@ -24,5 +23,4 @@ services:
       - registry
       - greeting-service
     environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://registry:8761/eureka
+      - EUREKA_SERVER=http://registry:8761/eureka
