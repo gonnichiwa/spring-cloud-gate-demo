@@ -148,7 +148,7 @@ $ docker-compose up
 
 ## 결과 확인
 
-이후 `작성 목적` 목차에 나와있는대로 실행해보면 결과 잘 나옴
+이후 [docs](https://github.com/gonnichiwa/spring-cloud-gate-demo?tab=readme-ov-file#docs) 목차[Lets try it](https://spring.io/blog/2019/07/01/hiding-services-runtime-discovery-with-spring-cloud-gateway#lets-try-it)에 나와있는대로 실행해보면 결과 잘 나옴
 
 First, Check that the Greeting Service is Hidden:  
 
